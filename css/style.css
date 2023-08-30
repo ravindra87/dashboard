@@ -1,0 +1,273 @@
+/* Import Google Font link */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Poppins:ital,wght@0,400;1,300&family=Roboto:wght@500&display=swap");
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Poppins", sans-serif; /* Use proper font family name */
+  text-transform: capitalize;
+}
+
+body {
+  display: flex;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  width: 100px;
+  height: 100vh;
+  padding: 0 0.5rem;
+  color: #fff;
+  overflow: hidden;
+  transition: all 0.5s linear;
+  background: rgba(
+    113,
+    99,
+    186,
+    0.8
+  ); /* Use rgba format for color with alpha */
+}
+
+.sidebar:hover {
+  width: 250px; /* Corrected typo */
+}
+
+.logo {
+  height: 80px;
+  padding: 14px;
+}
+
+.menu {
+  height: 70%;
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 0.8rem;
+  margin: 6px 0;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover,
+.active {
+  background: #fff;
+}
+
+.menu a {
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  text-transform: uppercase;
+}
+
+.menu a span {
+  overflow: hidden;
+}
+
+.menu a i {
+  font-size: 1.2rem;
+}
+
+.main-content {
+  position: relative;
+  background: #c2c0c0;
+  width: calc(100% - 100px); /* Adjusted width to account for sidebar */
+  padding: 1rem;
+}
+
+.header-wrapper img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px 2rem;
+  margin-bottom: 1rem;
+}
+
+.header-title {
+  color: rgba(113, 99, 186, 0.9); /* Use rgba format for color with alpha */
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.search {
+  background: rgb(237, 237, 237);
+  border-radius: 15px;
+  color: rgb(113, 99, 186, 255);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+}
+.search input {
+  background: transparent;
+  padding: 10px;
+}
+.search i {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.search i:hover {
+  transform: scale(1.2);
+}
+
+/* card container  */
+.card {
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  gap: 1rem;
+}
+
+.orders--card {
+  background: rgb(229, 243, 255); /* Adjusted background color */
+  border-radius: 10px;
+  padding: 1.2rem;
+  width: 18rem;
+  height: 13rem; /* Adjusted height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.5s ease-in-out;
+}
+
+.orders--card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px ;
+}
+
+.icon {
+  font-size: 50px;
+  padding: 1rem;
+  height: 90px;
+  width: 90px;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 3rem;
+  color: #12ccda;
+}
+
+.amount {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 20px;
+  color: #777;
+  font-weight: 200;
+  padding-bottom: 10px;
+}
+
+.amount--value {
+  font-size: 18px;
+  font-weight: 600;
+  /* font-family: 'Courier New', Courier, monospace; */
+  color: #333;
+}
+.orders--card hr {
+  border: none;
+  border-top: 1px solid #ccc;   
+  margin: 10px 0;
+}
+
+.update {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.typo{
+text-align: center;
+font-size: 30px;
+align-items: center;
+margin-top: 20px;
+font-weight: 600;
+color: rebeccapurple;
+}
+
+
+/* Phones */
+@media (max-width: 767px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      padding: 1rem 0.5rem;
+      background: rgba(113, 99, 186, 0.8);
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      transition: none;
+      overflow: visible;
+    }
+  
+    .sidebar:hover {
+      width: 100%;
+    }
+  
+    .main-content {
+      width: 100%;
+      padding: 0.5rem;
+    }
+  
+    .card-wrapper {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .orders--card {
+      width: 100%;
+      height: auto;
+      padding: 1rem;
+    }
+  
+    .icon {
+      font-size: 60px;
+      height: auto;
+      width: auto;
+      font-size: 3rem;
+    }
+  
+    .amount--value {
+      font-size: 18px;
+    }
+  }
+  
